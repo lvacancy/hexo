@@ -13,13 +13,13 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="123456789101112131415161718192021$ mkdir hexo新建Hexo的文件夹$ cd hexo$ npm init进入文件夹 执行init$ npm install hexo命令执行成功则跳过该步骤,命令执行失败,可能是镜像源地址导致的$ npm config get registry执行以下命令查看当前环境的镜像源地址$ nrm ls查看当前环境下所有镜像源地址">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://vacancy-ly.github.io/hexo/WX20230701-200159@2x.png">
-<meta property="og:image" content="https://vacancy-ly.github.io/hexo/Hexo-Blog.assets/image-20230701203343302.png">
+<meta property="og:image" content="https://vacancy-ly.github.io/hexo/Hexo-Blog/WX20230701-200159@2x.png">
+<meta property="og:image" content="https://vacancy-ly.github.io/hexo/Hexo-Blog/image-20230701203343302.png">
 <meta property="article:published_time" content="2023-07-01T11:35:52.000Z">
-<meta property="article:modified_time" content="2023-07-01T12:43:25.222Z">
+<meta property="article:modified_time" content="2023-07-01T12:49:10.266Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://vacancy-ly.github.io/hexo/WX20230701-200159@2x.png">
+<meta name="twitter:image" content="https://vacancy-ly.github.io/hexo/Hexo-Blog/WX20230701-200159@2x.png">
   
     <link rel="alternate" href="/hexo/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -102,7 +102,7 @@
       
         <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> hexo</span><br><span class="line">新建Hexo的文件夹</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> hexo</span><br><span class="line">$ npm init</span><br><span class="line">进入文件夹 执行init</span><br><span class="line"></span><br><span class="line">$ npm install hexo</span><br><span class="line">命令执行成功则跳过该步骤,命令执行失败,可能是镜像源地址导致的</span><br><span class="line">$ npm config get registry</span><br><span class="line">执行以下命令查看当前环境的镜像源地址</span><br><span class="line">$ nrm <span class="built_in">ls</span></span><br><span class="line">查看当前环境下所有镜像源地址</span><br><span class="line"> &gt; taobao ------- https://registry.npmmirror.com/</span><br><span class="line">$ nrm use taobao</span><br><span class="line">如果有该镜像源,切换该镜像继续执行</span><br><span class="line">$ npm config <span class="built_in">set</span> registry http://registry.npmmirror.com </span><br><span class="line">也可以直接设置镜像源地址</span><br><span class="line"></span><br><span class="line">$ npx hexo init vacancy</span><br><span class="line">初始化博客的目录文件,可能需要进行翻墙,不翻墙会导致github中的资源包下载失败(也可以尝试其他方式)</span><br></pre></td></tr></table></figure>
 
-<p><img src="/hexo/WX20230701-200159@2x.png" alt="Alt text"></p>
+<p><img src="/hexo/Hexo-Blog/WX20230701-200159@2x.png" alt="Alt text"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">将新建的文件夹中上面圈起来的给手动放到根目录上,最终的目录结构如上图,刚创建的文件可以进行删除(因为hexo init命令必须在空的文件夹里面执行,所有需要临时创建一个目录做载体)</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">rm</span> -rf node_modules</span><br><span class="line">$ <span class="built_in">rm</span> -rf package-lock.json</span><br><span class="line">需要进行依赖更新,删除以上两个文件</span><br><span class="line">$ npm i</span><br><span class="line">执行命令重新下载依赖包</span><br><span class="line"></span><br><span class="line">$ npx hexo server</span><br><span class="line">启动本地预览服务器</span><br><span class="line"></span><br><span class="line">$ npx hexo new <span class="string">&quot;test&quot;</span></span><br><span class="line">新建一个测试页面</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;server&quot;</span>: <span class="string">&quot;hexo server -p 4000&quot;</span></span><br><span class="line"> &#125;</span><br><span class="line"> 可以将启动命令封装脚本进行执行</span><br><span class="line"> $ npm run server</span><br><span class="line"> 执行启动脚本</span><br><span class="line"> &gt; INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.</span><br><span class="line"> 控制台出现该内容则说明启动成功</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">将博客挂载到github上:</span><br><span class="line"></span><br><span class="line">1、先在github上创建hexo仓库</span><br><span class="line"></span><br><span class="line">$ npm i hexo-deployer-git</span><br><span class="line">2、安装hexo部署git的工具包</span><br></pre></td></tr></table></figure>
@@ -111,7 +111,7 @@
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npx hexo clean &amp;&amp; npx hexo deploy</span></span><br><span class="line">将hexo部署到gitbug中</span><br></pre></td></tr></table></figure>
 
-<p><img src="/hexo/Hexo-Blog.assets/image-20230701203343302.png" alt="image-20230701203343302"></p>
+<p><img src="/hexo/Hexo-Blog/image-20230701203343302.png" alt="image-20230701203343302"></p>
 <p>图片中的地址可以直接进行预览</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">预览成功后的页面会丢失样式,因为github项目存在中间目录</span><br><span class="line"></span><br><span class="line">url: https://vacancy-ly.github.io/hexo/</span><br><span class="line">将_config.yml中url 替换为github的预览地址即可</span><br></pre></td></tr></table></figure>
 
@@ -119,7 +119,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vacancy-ly.github.io/hexo/2023/07/01/Hexo-Blog/" data-id="cljjzvc8r0000onfyhgv48lor" data-title="Hexo Blog" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://vacancy-ly.github.io/hexo/2023/07/01/Hexo-Blog/" data-id="cljk02mh50000plfyfq9s1z6j" data-title="Hexo Blog" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
